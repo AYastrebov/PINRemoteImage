@@ -101,8 +101,6 @@
 		A7343C5B228993D100972894 /* NSHTTPURLResponse+MaxAge.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD28EAE81695DDF84BB76B8 /* NSHTTPURLResponse+MaxAge.m */; };
 		A7343C60228993F400972894 /* NSHTTPURLResponse+MaxAge.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD28EAE81695DDF84BB76B8 /* NSHTTPURLResponse+MaxAge.m */; };
 		ACD28AB87FABF6BA3B9BF4E4 /* NSDate+PINCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD28D963D79EEC14EE071CE /* NSDate+PINCacheTests.m */; };
-		BD77F89E25CC3FB800CA5CBC /* WebPDecoder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD77F89C25CC3FB800CA5CBC /* WebPDecoder.xcframework */; };
-		BD77F8A025CC3FB800CA5CBC /* WebPDemux.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD77F89D25CC3FB800CA5CBC /* WebPDemux.xcframework */; };
 		BD77F8B925CC438500CA5CBC /* PINOperation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD77F8B725CC438500CA5CBC /* PINOperation.xcframework */; };
 		BD77F8BB25CC438500CA5CBC /* PINCache.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD77F8B825CC438500CA5CBC /* PINCache.xcframework */; };
 		BD77F8E325CC454B00CA5CBC /* PINOperation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD77F8B725CC438500CA5CBC /* PINOperation.xcframework */; };
@@ -246,8 +244,6 @@
 		ACD28A0374E664CFF0BB3297 /* NSHTTPURLResponse+MaxAge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+MaxAge.h"; sourceTree = "<group>"; };
 		ACD28D963D79EEC14EE071CE /* NSDate+PINCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+PINCacheTests.m"; sourceTree = "<group>"; };
 		ACD28EAE81695DDF84BB76B8 /* NSHTTPURLResponse+MaxAge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+MaxAge.m"; sourceTree = "<group>"; };
-		BD77F89C25CC3FB800CA5CBC /* WebPDecoder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebPDecoder.xcframework; path = webp/WebPDecoder.xcframework; sourceTree = "<group>"; };
-		BD77F89D25CC3FB800CA5CBC /* WebPDemux.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebPDemux.xcframework; path = webp/WebPDemux.xcframework; sourceTree = "<group>"; };
 		BD77F8B725CC438500CA5CBC /* PINOperation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PINOperation.xcframework; path = Carthage/Build/PINOperation.xcframework; sourceTree = "<group>"; };
 		BD77F8B825CC438500CA5CBC /* PINCache.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PINCache.xcframework; path = Carthage/Build/PINCache.xcframework; sourceTree = "<group>"; };
 		D93A340024182D46005EB15E /* TestAnimatedImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAnimatedImage.h; sourceTree = "<group>"; };
@@ -321,8 +317,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD77F8A025CC3FB800CA5CBC /* WebPDemux.xcframework in Frameworks */,
-				BD77F89E25CC3FB800CA5CBC /* WebPDecoder.xcframework in Frameworks */,
 				BD77F8BB25CC438500CA5CBC /* PINCache.xcframework in Frameworks */,
 				BD77F8B925CC438500CA5CBC /* PINOperation.xcframework in Frameworks */,
 			);
@@ -336,8 +330,6 @@
 			children = (
 				BD77F8B825CC438500CA5CBC /* PINCache.xcframework */,
 				BD77F8B725CC438500CA5CBC /* PINOperation.xcframework */,
-				BD77F89C25CC3FB800CA5CBC /* WebPDecoder.xcframework */,
-				BD77F89D25CC3FB800CA5CBC /* WebPDemux.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
