@@ -1,0 +1,93 @@
+          __   __  ____  ____  ____
+         /  \\/  \/  _ \/  _ )/  _ \
+         \       /   __/  _  \   __/
+          \__\__/\____/\_____/__/ ____  ___
+                / _/ /    \    \ /  _ \/ _/
+               /  \_/   / /   \ \   __/  \__
+               \____/____/\_____/_____/____/v1.2.0
+
+Description:
+============
+
+WebP codec: library to encode and decode images in WebP format. This package
+contains an iOS framework that can be used in other applications to add
+WebP support.
+
+See http://developers.google.com/speed/webp
+
+The latest source tree is available at
+https://chromium.googlesource.com/webm/libwebp
+
+It is released under the same license as the WebM project.
+See http://www.webmproject.org/license/software/ or the
+"COPYING" file for details. An additional intellectual
+property rights grant can be found in the file PATENTS.
+
+Files:
+======
+
+WebP.framework: libwebp headers / library
+Architectures in the fat file: WebP.framework/WebP are: i386 armv7 armv7s x86_64 arm64 
+
+WebP.xcframework: libwebp headers / library (Mac Catalyst)
+Architecture & target support:
+ios-arm64_armv7_armv7s
+ios-arm64_x86_64-maccatalyst
+ios-i386_x86_64-simulator
+macos-arm64_x86_64
+
+WebPDecoder.framework: libwebp headers / library
+Architectures in the fat file: WebPDecoder.framework/WebPDecoder are: i386 armv7 armv7s x86_64 arm64 
+
+WebPDecoder.xcframework: libwebp headers / library (Mac Catalyst)
+Architecture & target support:
+ios-arm64_armv7_armv7s
+ios-arm64_x86_64-maccatalyst
+ios-i386_x86_64-simulator
+macos-arm64_x86_64
+
+WebPDemux.framework: libwebp headers / library
+Architectures in the fat file: WebPDemux.framework/WebPDemux are: i386 armv7 armv7s x86_64 arm64 
+
+WebPDemux.xcframework: libwebp headers / library (Mac Catalyst)
+Architecture & target support:
+ios-arm64_armv7_armv7s
+ios-arm64_x86_64-maccatalyst
+ios-i386_x86_64-simulator
+macos-arm64_x86_64
+
+WebPMux.framework: libwebp headers / library
+Architectures in the fat file: WebPMux.framework/WebPMux are: i386 armv7 armv7s x86_64 arm64 
+
+WebPMux.xcframework: libwebp headers / library (Mac Catalyst)
+Architecture & target support:
+ios-arm64_armv7_armv7s
+ios-arm64_x86_64-maccatalyst
+ios-i386_x86_64-simulator
+macos-arm64_x86_64
+
+Built with:
+Xcode 12.2
+Build version 12B45b
+iOS SDKs:
+	iOS 14.2                      	-sdk iphoneos14.2
+
+iOS Simulator SDKs:
+	Simulator - iOS 14.2          	-sdk iphonesimulator14.2
+
+macOS SDKs:
+	DriverKit 20.0                	-sdk driverkit.macosx20.0
+	macOS 11.0                    	-sdk macosx11.0
+
+tvOS SDKs:
+	tvOS 14.2                     	-sdk appletvos14.2
+
+tvOS Simulator SDKs:
+	Simulator - tvOS 14.2         	-sdk appletvsimulator14.2
+
+watchOS SDKs:
+	watchOS 7.1                   	-sdk watchos7.1
+
+watchOS Simulator SDKs:
+	Simulator - watchOS 7.1       	-sdk watchsimulator7.1
+
