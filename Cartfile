@@ -1,2 +1,2 @@
-github "pinterest/PINCache" ~> 3.0.3
-github "pinterest/PINOperation" ~> 1.2.1
+github "pinterest/PINCache" "master"
+github "pinterest/PINOperation" "master"

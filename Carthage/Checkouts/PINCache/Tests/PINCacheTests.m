@@ -2,11 +2,16 @@
 //  Modifications by Garrett Moon
 //  Copyright (c) 2015 Pinterest. All rights reserved.
 
-#if SWIFT_PACKAGE
-@import PINCache;
-@import PINOperation;
+
+#if !__has_include (<PINCache/PINCache.h>)
+#import "PINCache.h"
 #else
 #import <PINCache/PINCache.h>
+#endif
+
+#if !__has_include (<PINOperation/PINOperation.h>)
+#import "PINOperation.h"
+#else
 #import <PINOperation/PINOperation.h>
 #endif
 
@@ -31,6 +36,7 @@ const NSTimeInterval PINCacheTestBlockTimeout = 20.0;
 @property (readonly) PINOperationQueue *operationQueue;
 
 + (dispatch_queue_t)sharedTrashQueue;
++ (NSLock *)sharedLock;
 + (NSURL *)sharedTrashURL;
 - (NSString *)encodedString:(NSString *)string;
 
@@ -1342,7 +1348,9 @@ const NSTimeInterval PINCacheTestBlockTimeout = 20.0;
 {
     const NSUInteger fileCount = 100;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *trashPath = [[PINDiskCache sharedTrashURL] path];
+    [[PINDiskCache sharedLock] lock];
+        NSString *trashPath = [[PINDiskCache sharedTrashURL] path];
+    [[PINDiskCache sharedLock] unlock];
     
     dispatch_group_t group = dispatch_group_create();
     
@@ -1408,5 +1416,25 @@ const NSTimeInterval PINCacheTestBlockTimeout = 20.0;
     XCTAssert(cache.diskCache.isTTLCache);
     XCTAssert(cache.memoryCache.isTTLCache);
 }
+
+- (void)testDiskRemoveAllObjectsAndRemoveObjectForKey
+{
+    // Regression test for https://github.com/pinterest/PINCache/issues/295, where
+    // -[removeAllObjects] and -[removeObjectForKey:] would race and the latter could fail.
+    NSString *cacheName = @"testDiskRemoveAllObjectsAndRemoveObjectForKey";
+    PINDiskCache *diskCache = [[PINDiskCache alloc] initWithName:cacheName];
+
+    for (NSUInteger idx = 0; idx < 5000; idx++) {
+        [diskCache removeAllObjects];
+        NSString *key = [@(idx) stringValue];
+        NSData *tmpData = [key dataUsingEncoding:NSUTF8StringEncoding];
+        [diskCache setObject:tmpData forKey:key];
+        XCTAssertNotNil([diskCache objectForKey:key]);
+        [diskCache removeObjectForKey:key];
+        XCTAssertNil([diskCache objectForKey:key]);
+    }
+}
+
+
 
 @end
