@@ -20,7 +20,7 @@
 #define HAVE_DLFCN_H 1
 
 /* Define to 1 if you have the <GLUT/glut.h> header file. */
-/* #undef HAVE_GLUT_GLUT_H */
+#define HAVE_GLUT_GLUT_H 1
 
 /* Define to 1 if you have the <GL/glut.h> header file. */
 /* #undef HAVE_GL_GLUT_H */
@@ -80,7 +80,7 @@
 #define PACKAGE_NAME "libwebp"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libwebp 1.1.0"
+#define PACKAGE_STRING "libwebp 1.2.0"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libwebp"
@@ -89,17 +89,17 @@
 #define PACKAGE_URL "http://developers.google.com/speed/webp"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.1.0"
+#define PACKAGE_VERSION "1.2.0"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
 /* #undef PTHREAD_CREATE_JOINABLE */
 
 /* Define to 1 if you have the ANSI C header files. */
-#define STDC_HEADERS 1
+/* #undef STDC_HEADERS */
 
 /* Version number of package */
-#define VERSION "1.1.0"
+#define VERSION "1.2.0"
 
 /* Set to 1 if GIF library is installed */
 /* #undef WEBP_HAVE_GIF */
